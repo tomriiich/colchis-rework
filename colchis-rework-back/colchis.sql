@@ -19,7 +19,7 @@ CREATE TABLE `user` (
 CREATE TABLE `message` (
   `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `content` TEXT(500),  
-  `date` TIMESTAMP,
+  `date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `user_id` INT,
   CONSTRAINT FK_user_message FOREIGN KEY (user_id)
     REFERENCES user(id)

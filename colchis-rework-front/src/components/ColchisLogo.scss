@@ -1,0 +1,17 @@
+.logo-content {
+    position: relative;
+    margin: 20px;
+}
+    
+.colchis-logo {
+    display: block;
+    margin: auto;
+    width: 12rem;
+}
+
+@media screen and (min-width: 993px) {
+
+    .colchis-logo {
+        width: 18rem;
+      }
+}

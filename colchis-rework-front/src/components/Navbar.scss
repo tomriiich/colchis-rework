@@ -1,0 +1,68 @@
+@import '../variables';
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: $blue-middle-color;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    bottom: 0;
+    order: 1;
+  }
+
+.button-about, .button-family, .button-assets, .button-contact {
+    border: none;
+    width: 20%;
+    background-color: transparent;
+    //border: 4px solid $blue-light-color;
+    border-radius: 0.5rem;
+    color: $blue-light-color;
+    cursor: pointer;
+    font-family: $font-family-meta-bold;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0.3em;
+}
+
+a {
+    text-decoration: none;   
+}
+
+.button-about:hover, .button-family:hover, .button-assets:hover, .button-contact:hover {
+    background-color: $gold-accent-color;
+    box-shadow: 
+        inset -5em 0 0 0 $gold-accent-color, 
+        inset 5em 0 0 0 $gold-accent-color;
+    transition: all 0.5s ease;
+    color: #202020;
+}
+
+.button-about .active, .button-about:focus, .button-family .active, .button-family:focus, .button-assets .active, .button-assets:focus, .button-contact .active, .button-contact:focus {
+    color: #202020;
+    background-color: $blue-light-color;
+    box-shadow: 
+        inset -3.5em 0 0 0 $blue-light-color,
+        inset 3.5em 0 0 0 $blue-light-color;
+        animation: pulse 1s;
+    outline: none;
+}
+
+.active{
+    color: $blue-dark-color;
+    background-color: $gold-accent-color;
+    box-shadow: 
+        inset -3.5em 0 0 0 $gold-accent-color,
+        inset 3.5em 0 0 0 $gold-accent-color;
+        animation: pulse 1s;
+    outline: none;
+}
+
+
+@media screen and (min-width: 993px) {
+
+    .navbar {
+        top: 0;
+        order: initial;
+      }
+}

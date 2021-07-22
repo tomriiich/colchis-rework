@@ -5,6 +5,7 @@ const db = require('../db-config');
 messageRoute.get('/', (req, res) => {
   db.query('SELECT * FROM message', (err, results) => {
     if (err) {
+      console.log(err);
       res.status(500);
     } else {
       res.status(200).json(results);
@@ -15,6 +16,7 @@ messageRoute.get('/', (req, res) => {
 messageRoute.get('/:id', (req, res) => {
   db.query('SELECT * FROM message WHERE id = ?', [req.params.id], (err, results) => {
     if (err) {
+      console.log(err);
       res.status(500);
     } else if (results.length !== 1) {
       res.status(404);
@@ -27,15 +29,22 @@ messageRoute.get('/:id', (req, res) => {
 messageRoute.post('/', (req, res) => {
   const message = {
     content: req.body.content,
-    date: req.body.date,
   };
 
-  db.query('INSERT INTO message (content, date) VALUES (?, ?)', [message.content, message.date], (err, results) => {
+  db.query('INSERT INTO message (content) VALUES (?)', [message.content], (err, results) => {
     if (err) {
       console.log(err);
       res.status(500);
     } else {
-      res.status(201).json({ ...message, id: results.insertId });
+      db.query('SELECT * FROM message WHERE id=?', results.insertId, (err, results) => {
+        if (err) {
+          console.log(err);
+          res.status(500);
+        } else {
+          const [message] = results;
+          res.status(201).json(message);
+        }
+      });
     }
   });
 });

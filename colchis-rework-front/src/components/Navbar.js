@@ -7,11 +7,11 @@ import './Navbar.scss';
 function Navbar() {
   return (
     <>
-      <nav className="navBar">
-        <NavLink exact to="/" type="button" activeClassName="active" className="buttonLink1">About</NavLink>
-        <NavLink to="/family" type="button" activeClassName="active" className="buttonLink2">Family</NavLink>
-        <NavLink to="/assets" type="button" activeClassName="active" className="buttonLink3">Assets</NavLink>
-        <NavLink to="/contact" type="button" activeClassName="active" className="buttonLink3">Contact</NavLink>
+      <nav className="navbar">
+        <NavLink exact to="/" type="button" activeClassName="active" className="button-about">About</NavLink>
+        <NavLink to="/family" type="button" activeClassName="active" className="button-family">Family</NavLink>
+        <NavLink to="/assets" type="button" activeClassName="active" className="button-assets">Assets</NavLink>
+        <NavLink to="/contact" type="button" activeClassName="active" className="button-contact">Contact</NavLink>
       </nav>
     </>
   );

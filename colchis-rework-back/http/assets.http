@@ -11,5 +11,5 @@ Content-Type: application/json
 {
     "name":"Swords",
     "number": 500000,
-    "worth": 1200,
+    "worth": 1200
 }

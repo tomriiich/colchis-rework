@@ -1,0 +1,53 @@
+@import '../_variables.scss';
+
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    h1 {
+        text-align: center;
+        font-family: $font-family-meta-bold;
+    }
+    form {
+        text-align: center;
+    }
+    
+    label,
+    input,
+    textarea,
+    select,
+    button {
+        width: 270px;
+        margin: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    textarea {
+        height: 140px;
+        overflow: auto;
+    }
+    
+    .submit-button {
+        border: none;
+        border-radius: 0.5em;
+        height: 100%;
+        background-color: $blue-middle-color;
+        width: 20%;
+        font-weight: bold;
+        color: $white-color;
+        font-size: 18px;
+        cursor: pointer;
+        margin: 2em;
+        padding: 1em;
+        align-self: center;
+    }
+    
+    .submit-button:hover {
+        background-color: $gold-accent-color;
+        transition: all 0.3s ease;
+        color: $blue-dark-color;
+    }
+    
+}

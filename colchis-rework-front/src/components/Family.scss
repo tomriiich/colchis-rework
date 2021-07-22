@@ -1,0 +1,14 @@
+@import '../_variables.scss';
+
+.family-content {
+    display: flex;
+    flex-direction: column;
+    h1 {
+        text-align: center;
+        font-family: $font-family-meta-bold;
+    }
+    .card-content {
+        display: flex;
+        flex-direction: row;
+    }
+}
