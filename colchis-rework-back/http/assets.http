@@ -1,0 +1,15 @@
+###
+GET http://localhost:5000/assets
+
+###
+GET http://localhost:5000/assets/1
+
+###
+POST http://localhost:5000/assets
+Content-Type: application/json
+
+{
+    "name":"Swords",
+    "number": 500000,
+    "worth": 1200,
+}

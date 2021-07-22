@@ -1,15 +1,7 @@
-const express = require('express');
+const app = require('./server');
 
-const serverPort = 8000;
+const port = process.env.PORT || 3000;
 
-// init the express app
-const app = express();
-
-// define the index route
-app.get('/', (req, res) => {
- console.log('A new request just hit the API !');
- res.send('Hello dear API client :)');
+app.listen(port, () => {
+  console.log(`Server is running on ${port}`);
 });
-
-// listen to incoming requests
-app.listen(serverPort, () => console.log('Express server is running'));

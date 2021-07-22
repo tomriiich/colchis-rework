@@ -1,0 +1,15 @@
+###
+GET http://localhost:5000/message
+
+###
+GET http://localhost:5000/message/1
+
+###
+POST http://localhost:5000/message
+Content-Type: application/json
+
+{
+    "name":"Swords",
+    "number": 500000,
+    "worth": 1200,
+}
