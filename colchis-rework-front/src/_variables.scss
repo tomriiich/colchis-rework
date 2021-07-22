@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$sans-serif-font: roboto;
+
+$yellow-color: hsla(48,96%,66%, 1);
+$violet-color: hsla(258,55%,50%, 1);
+$green-color: hsla(175,39%,44%, 1);
+$pink-color: hsla(331,82%,59%, 1);
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    background-position: 0;
+    height: 100vmin;
+    font-family: $sans-serif-font;
+}
